@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    border-radius: 5px;
+    position: absolute;
+    width: 120px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+}
+
+.container div{
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px ;
+    padding-top: 30px ;
+    background-color: #4b3858;
+    
+}
+
+.container h5{
+    width: 40%;
+    text-align: center;
+    color: white;
+    margin: 0;
+    transition:all 1s linear;
+}
+
+.container input{
+    color: white;
+    height: 25px;
+    background-color: #392d41;
+}
+
+.container div:focus-within h5{
+    width:100%;
+    transition:all 1s linear;
+}

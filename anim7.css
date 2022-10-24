@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    border-radius: 5px;
+    position: absolute;
+    width: 120px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container div:nth-of-type(1){
+    animation: state 1s 0s steps(2, jump-none) reverse infinite;
+
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    box-shadow: 5px 0px black, 10px 0px black, 15px 0px black, 20px 0px black, 25px 0px black, 30px 0px black, 35px 0px black, 40px 0px black,
+    
+    -5px 5px black, 0px 5px black, 5px 5px white, 10px 5px black, 15px 5px black, 20px 5px black, 25px 5px black, 30px 5px black, 35px 5px black, 40px 5px black, 45px 5px black,
+
+    -5px 10px black, 0px 10px black, 5px 10px black, 10px 10px black, 15px 10px black, 20px 10px black, 25px 10px black, 30px 10px black, 35px 10px black, 40px 10px black, 45px 10px black,
+
+    -5px 15px black, 0px 15px black, 5px 15px black, 10px 15px black, 15px 15px black, 20px 15px black, 25px 15px black, 30px 15px black, 35px 15px black, 40px 15px black, 45px 15px black,
+
+    -5px 20px black, 0px 20px black, 5px 20px black, 10px 20px black, 15px 20px black, 20px 20px black, 25px 20px black, 30px 20px black, 35px 20px black, 40px 20px black, 45px 20px black,
+
+    -5px 25px black, 0px 25px black, 5px 25px black, 10px 25px black, 15px 25px black,
+
+    -25px 30px black, -20px 30px black, -10px 30px black, -5px 30px black, 0px 30px black, 5px 30px black, 10px 30px black, 15px 30px black, 20px 30px black, 25px 30px black, 30px 30px black, 35px 30px black,
+
+    -55px 35px black, -20px 35px black, -15px 35px black, -10px 35px black, -5px 35px black, 0px 35px black, 5px 35px black, 10px 35px black,
+
+    -55px 40px black, -20px 40px black, -15px 40px black, -10px 40px black, -5px 40px black, 0px 40px black, 5px 40px black, 10px 40px black,
+
+    -55px 45px black, -50px 45px black, -25px 45px black, -20px 45px black, -15px 45px black, -10px 45px black, -5px 45px black, 0px 45px black, 5px 45px black, 10px 45px black,
+
+    -55px 50px black, -50px 50px black, -45px 50px black, -30px 50px black, -25px 50px black, -20px 50px black, -15px 50px black, -10px 50px black, -5px 50px black, 0px 50px black, 5px 50px black, 10px 50px black, 15px 50px black, 20px 50px,
+
+    -55px 55px black, -50px 55px black, -45px 55px black, -40px 55px black, -35px 55px black, -30px 55px black, -25px 55px black, -20px 55px black, -15px 55px black, -10px 55px black, -5px 55px black, 0px 55px black, 5px 55px black, 10px 55px black, 20px 55px black,
+
+    -50px 60px black, -45px 60px black, -40px 60px black, -35px 60px black, -30px 60px black, -25px 60px black, -20px 60px black, -15px 60px black, -10px 60px black, -5px 60px black, 0px 60px black, 5px 60px black, 10px 60px black,
+
+    -45px 65px black, -40px 65px black, -35px 65px black, -30px 65px black, -25px 65px black, -20px 65px black, -15px 65px black, -10px 65px black, -5px 65px black, 0px 65px black, 5px 65px black,
+
+    -40px 70px black, -35px 70px black, -30px 70px black, -25px 70px black, -20px 70px black, -15px 70px black, -10px 70px black, -5px 70px black, 0px 70px black,
+
+    -35px 75px black, -30px 75px black, -25px 75px black, -20px 75px black, -15px 75px black, -10px 75px black, -5px 75px black,
+
+    -30px 80px black, -25px 80px black, -20px 80px black, -5px 80px black, 0px 80px black,
+
+    -30px 85px black, -25px 85px black,
+
+    -30px 90px black,
+
+    -30px 95px black, -25px 95px black
+    ;
+} 
+
+.container div:nth-of-type(2){
+    animation: state 1s 0s steps(2, jump-none) infinite;
+
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    box-shadow: 0px -5px black, 5px -5px black, 10px -5px black, 15px -5px black, 20px -5px black, 25px -5px black, 30px -5px black, 35px -5px black, 40px -5px black,
+    
+    -5px 0px black, 0px 0px black, 5px 0px white, 10px 0px black, 15px 0px black, 20px 0px black, 25px 0px black, 30px 0px black, 35px 0px black, 40px 0px black, 45px 0px black,
+
+    -5px 5px black, 0px 5px black, 5px 5px black, 10px 5px black, 15px 5px black, 20px 5px black, 25px 5px black, 30px 5px black, 35px 5px black, 40px 5px black, 45px 5px black,
+
+    -5px 10px black, 0px 10px black, 5px 10px black, 10px 10px black, 15px 10px black, 20px 10px black, 25px 10px black, 30px 10px black, 35px 10px black, 40px 10px black, 45px 10px black,
+
+    -5px 15px black, 0px 15px black, 5px 15px black, 10px 15px black, 15px 15px black, 20px 15px black, 25px 15px black, 30px 15px black, 35px 15px black, 40px 15px black, 45px 15px black,
+
+    -5px 20px black, 0px 20px black, 5px 20px black, 10px 20px black, 15px 20px black,
+    
+    -10px 25px black, -5px 25px black, 0px 25px black, 5px 25px black, 10px 25px black, 15px 25px black,
+
+    -25px 30px black, -20px 30px black, -15px 30px black, -10px 30px black, -5px 30px black, 0px 30px black, 5px 30px black, 10px 30px black, 15px 30px black, 20px 30px black, 25px 30px black, 30px 30px black, 35px 30px black,
+
+    -55px 35px black, -20px 35px black, -15px 35px black, -10px 35px black, -5px 35px black, 0px 35px black, 5px 35px black, 10px 35px black,
+
+    -55px 40px black, -20px 40px black, -15px 40px black, -10px 40px black, -5px 40px black, 0px 40px black, 5px 40px black, 10px 40px black, 15px 40px black, 20px 40px,
+
+    -55px 45px black, -50px 45px black, -25px 45px black, -20px 45px black, -15px 45px black, -10px 45px black, -5px 45px black, 0px 45px black, 5px 45px black, 10px 45px black, 20px 45px black,
+
+    -55px 50px black, -50px 50px black, -45px 50px black, -30px 50px black, -25px 50px black, -20px 50px black, -15px 50px black, -10px 50px black, -5px 50px black, 0px 50px black, 5px 50px black, 10px 50px black,
+
+    -55px 55px black, -50px 55px black, -45px 55px black, -40px 55px black, -35px 55px black, -30px 55px black, -25px 55px black, -20px 55px black, -15px 55px black, -10px 55px black, -5px 55px black, 0px 55px black, 5px 55px black, 10px 55px black,
+
+    -50px 60px black, -45px 60px black, -40px 60px black, -35px 60px black, -30px 60px black, -25px 60px black, -20px 60px black, -15px 60px black, -10px 60px black, -5px 60px black, 0px 60px black, 5px 60px black, 10px 60px black,
+
+    -45px 65px black, -40px 65px black, -35px 65px black, -30px 65px black, -25px 65px black, -20px 65px black, -15px 65px black, -10px 65px black, -5px 65px black, 0px 65px black, 5px 65px black,
+
+    -40px 70px black, -35px 70px black, -30px 70px black, -25px 70px black, -20px 70px black, -15px 70px black, -10px 70px black, -5px 70px black, 0px 70px black,
+
+    -35px 75px black, -30px 75px black, -25px 75px black, -20px 75px black, -15px 75px black, -10px 75px black, -5px 75px black,
+
+    -30px 80px black, -25px 80px black, -10px 80px black, -5px 80px black,
+
+    -25px 85px black, -20px 85px black, -5px 85px black,
+
+    -5px 90px black,
+
+    -5px 95px black, 0px 95px
+    ;
+}
+
+.container div:nth-of-type(3){
+    animation: state 1s 0s steps(2, jump-none) reverse infinite;
+    
+    height: 3px;
+    width: 3px;
+    background-color: black;
+    box-shadow: -85px 80px black, -80px 80px black, -75px 80px black, -70px 80px black, -65px 80px black, -60px 80px black, -55px 80px black, 5px 80px black, 10px 80px black, 15px 80px black, 20px 80px black, 25px 80px black, 30px 80px black, 35px 80px black, 40px 80px black, 45px 80px black, 50px 80px black,
+
+    -85px 90px black, -80px 90px black, -75px 90px black,
+
+    40px 100px black, 45px 100px black,
+
+    -50px 105px black, -45px 105px black
+}
+
+.container div:nth-of-type(4){
+    animation: state 1s 0s steps(2, jump-none) infinite;
+    
+    height: 3px;
+    width: 3px;
+    background-color: white;
+    box-shadow: -85px 80px black, -80px 80px black, -75px 80px black, -70px 80px black, -65px 80px black, -60px 80px black, -55px 80px black, 5px 80px black, 10px 80px black, 15px 80px black, 20px 80px black, 25px 80px black, 30px 80px black, 35px 80px black, 40px 80px black, 45px 80px black, 50px 80px black,
+
+    30px 90px black, 35px 90px black, 40px 90px black,
+
+    -60px 100px black, -55px 100px black,
+
+    20px 105px black, 25px 105px black,
+    
+    -75px 115px black, -70px 115px black
+}
+
+@keyframes state{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}

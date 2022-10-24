@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    border-radius: 5px;
+    position: absolute;
+    width: 120px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container div {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 100px;
+}
+
+.path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 5s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  #path1 {
+    animation-delay: 0s;
+  }
+
+  #path2 {
+    animation-delay: 0.5s;
+  }
+  
+  #path3 {
+    animation-delay: 1.5s;
+  }
+  
+  #path4 {
+    animation-delay: 2s;
+  }
+  
+  #path5 {
+    animation-delay: 2.5s;
+  }
+  
+  #path6 {
+    animation-delay: 3s;
+  }
+
+  #path7 {
+    animation-delay: 3.5s;
+  }
+
+  #path8 {
+    animation-delay: 4s;
+  }
+  
+  #path9 {
+    animation-delay: 4.5s;
+  }
+  
+  #path10 {
+    animation-delay: 5s;
+  }
+  
+  #path11 {
+    animation-delay: 5.5s;
+  }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 2000;
+      fill: transparent;
+    }
+    to {
+      stroke-dashoffset: 0;
+      fill: black;
+    }
+  }

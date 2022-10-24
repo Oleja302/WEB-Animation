@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+ 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    border-radius: 5px;
+    position: absolute;
+    width: 120px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+}
+
+.round {
+    padding: 10px;
+    animation: square 4s linear 0s infinite alternate;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 110px;
+    height: 80px;
+}
+
+.round div:nth-of-type(1) {
+    background: coral;
+    height: 3px;
+    width: 100%;
+    transform-origin: center;
+    animation: rotate-right 4s linear 0s infinite alternate;
+}
+
+.round div:nth-of-type(2) {
+    background: coral;
+    height: 3px;
+    width: 100%;
+    animation: swap-right 4s linear 0s infinite alternate;
+}
+
+.round div:nth-of-type(3) {
+    background: coral;
+    height: 3px;
+    width: 100%;
+    transform-origin: center;
+    animation: rotate-left 4s linear 0s infinite alternate;
+}
+
+.round div:nth-of-type(4) {
+    animation: round 4s linear infinite alternate; 
+    width: 80px;
+    height: 80px;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+}
+  
+@keyframes round{
+    0% {clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);}
+    25% {clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 25% 25%, 25% 25%, 25% 25%);}
+    50% {clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 100%, 50% 100%);}
+    75% {clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%, 50% 50%);}
+    100% {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 0% 0%);}
+}
+
+@keyframes square{
+    0% { width: 110px; height: 80px; }
+    100% {background-color: deeppink; width: 80px; height: 80px; }
+}
+
+@keyframes swap-right {
+  0% { transform: translate(0, 0);}
+  100% { transform: translate(110px, 0);}
+}
+
+@keyframes rotate-right {
+    0% { 
+        transform: translateY(0);
+    }
+    100%{ 
+        background-color: white;
+        width: 50%;
+        transform: translateY(26px) rotate(45deg);
+    }
+}
+
+@keyframes rotate-left {
+    0% { 
+        transform: translateY(0);
+    }
+    100%{ 
+        background-color: white;
+        width: 50%;
+        transform: translateY(-26px) rotate(-45deg);
+    }
+}
+

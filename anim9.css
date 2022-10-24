@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    border-radius: 5px;
+    position: absolute;
+    width: 120px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+}
+
+.container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #555555;
+    width: 250px;
+    height: 250px;
+}
+
+.container>div .round{
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    background-color: #767877;
+    border-radius: 50%;
+}
+
+.triangles{
+    transform-origin: 50% 65%;
+   
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 1s 1s, rotate 1s 3s, rotate 1s 5s, rotate 1s 7s, rotate 1s 9s, rotate 1s 11s;
+}
+
+@keyframes rotate{
+     0%{
+        transform: rotate(0deg);
+     }
+
+     100%{
+        transform: rotate(125deg);
+     }
+}
+
+@keyframes white{
+    0%{
+        border-bottom: 80px solid #68ccf0;
+    }
+
+    100%{
+        border-bottom: 80px solid white;
+    }
+}
+
+.triangle1{
+    position: relative;
+    width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 80px solid #68ccf0;
+
+    animation: white 1s 0s forwards, white 1s 6s reverse forwards;
+}
+
+.bottom-triangle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle2{
+    position: relative;
+    width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 80px solid #68ccf0;
+
+    animation: white 1s linear 2s forwards, white 1s 8s reverse forwards;
+}
+
+.triangle3{
+    position: relative;
+    width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 80px solid #68ccf0;
+
+    animation: white 1s linear 4s forwards, white 1s 10s reverse forwards;
+}

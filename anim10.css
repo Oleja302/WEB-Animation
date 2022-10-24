@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: lightblue;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    border-radius: 5px;
+    position: absolute;
+    width: 120px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.clock {
+    width: 500px;
+    height: 500px;
+    background: transparent url('img/clock.png') center center no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock .point-center {
+    width: 1px;
+    height: 1px;
+
+    position: relative;
+}
+
+.clock .point-center .arrow {
+    min-width: 100px;
+    height: 5px;
+    background-color: black;
+
+    border-radius: 0px 10px 10px 0px;
+
+    position: absolute;
+    left: -20px;
+    top: 0px;
+
+    transform-origin: 20px 50%;
+}
+
+.arrow.h {
+    z-index: 4;
+    animation: arrowAnim 864s steps(60) infinite;
+}
+
+.arrow.m {
+    width: 150px;
+    z-index: 3;
+
+    animation: arrowAnim 360s steps(60) infinite;
+}
+
+.arrow.s {
+    width: 200px;
+    z-index: 2;
+
+    animation: arrowAnim 60s steps(60) infinite;
+}
+
+.point {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    z-index: 6;
+    border-radius: 50%;
+}
+
+@keyframes arrowAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}

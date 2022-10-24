@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+ 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    border-radius: 5px;
+    position: absolute;
+    width: 120px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+}
+
+.subcontainer {
+    padding: 25px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 60px;
+}
+
+.container .subcontainer div{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.container .subcontainer div:nth-child(even){
+    margin-left: auto;
+}
+
+.container .subcontainer div:nth-child(1){
+    animation: anim1 4s linear 0s infinite alternate;
+}
+
+.container .subcontainer div:nth-child(2){
+    animation: anim2 4s linear 0s infinite alternate;
+}
+
+.container .subcontainer div:nth-child(3){
+    animation: anim3 4s linear 0s infinite alternate;
+}
+
+.container .subcontainer div:nth-child(4){
+    animation: anim4 4s linear 0s infinite alternate;
+}
+
+.container .subcontainer div:nth-child(5){
+    animation: anim3 4s linear 0s infinite alternate;
+}
+
+.container .subcontainer div:nth-child(6){
+    animation: anim2 4s linear 0s infinite alternate;
+}
+
+.container .subcontainer div:nth-child(7){
+    animation: anim1 4s linear 0s infinite alternate;
+}
+
+
+@keyframes anim1{
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(20px);
+    }
+}
+
+@keyframes anim2{
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(-3px);
+    }
+}
+
+@keyframes anim3{
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(3px);
+    }
+}
+
+@keyframes anim4{
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(-20px);
+    }
+}

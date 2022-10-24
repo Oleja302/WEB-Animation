@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+div{
+    height: 100vh;
+}
+
+div a{
+    color: white;
+    text-decoration: none;
+}
+
+div button{
+    border-radius: 5px;
+    width: 130px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}

@@ -1,0 +1,1077 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    border-radius: 5px;
+    position: absolute;
+    width: 120px;
+    background-color: lightcoral;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    background-color: lightsalmon;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger {
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.burger .top-bun {
+    width: 100%;
+    height: 150px;
+
+    background-color: #ffb660;
+    border-radius: 134px 128px 16px 16px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burger .top-bun .right-part,
+.burger .top-bun .left-part {
+    width: 25%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+.burger .top-bun .right-part>div,
+.burger .top-bun .left-part>div {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: #ffd792;
+    border-radius: 50%;
+
+
+}
+
+
+.burger .top-bun .left-part>div:nth-of-type(1) {
+    margin-left: 67px;
+    margin-top: 80px;
+
+    animation: pointAnim 4s 1s linear infinite;
+    animation-direction: alternate;
+}
+
+
+.burger .top-bun .left-part>div:nth-of-type(2) {
+    margin-left: 59px;
+    margin-top: -20px;
+
+    animation: pointAnim 4s 2s linear infinite;
+    animation-direction: alternate;
+}
+
+
+.burger .top-bun .left-part>div:nth-of-type(3) {
+    margin-left: -20px;
+    margin-top: 20px;
+
+    animation: pointAnim 4s 0s linear infinite;
+    animation-direction: alternate;
+}
+
+
+.burger .top-bun .right-part>div:nth-of-type(1) {
+    margin-left: -83px;
+    margin-top: 80px;
+
+    animation: pointAnim 4s 0s linear infinite;
+    animation-direction: alternate;
+}
+
+.burger .top-bun .right-part>div:nth-of-type(2) {
+    margin-left: -43px;
+    margin-top: -20px;
+
+    animation: pointAnim 4s 1s linear infinite;
+    animation-direction: alternate;
+}
+
+.burger .top-bun .right-part>div:nth-of-type(3) {
+    margin-left: 32px;
+    margin-top: 20px;
+
+    animation: pointAnim 4s 2s linear infinite;
+    animation-direction: alternate;
+}
+
+
+.burger .top-bun .center-part {
+    width: 50%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.burger .top-bun .center-part .eye-section {
+    width: 30%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    padding: 0px 15px;
+
+    position: relative;
+
+    overflow: auto;
+
+}
+
+.burger .top-bun .center-part .eye-section .eye {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: black;
+    border: 9px white solid;
+    border-radius: 50%;
+    position: relative;
+}
+
+.burger .top-bun .center-part .eye-section .eye:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.burger .top-bun .center-part .eye-section .eye:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.burger .top-bun .center-part .eye-section .underline {
+    width: 100%;
+    height: 18px;
+    border-radius: 10px;
+    background-color: darkviolet;
+    margin-top: 10px;
+}
+
+.burger .top-bun .center-part .eye-section .eyelid {
+    width: 62px;
+    height: 65px;
+    border-radius: 40px 40px 50px 50px;
+    background-color: #ffb660;
+    position: absolute;
+    top: -15px;
+    z-index: 2;
+    border-bottom: 2px black solid;
+
+    animation: eyelidAnim 3s 0s linear infinite;
+    animation-direction: alternate;
+}
+
+.burger .top-bun .center-part .mouth-section {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.burger .top-bun .center-part .mouth-section .nose {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 2;
+    top: 40px;
+    background-color: #ffb660;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.burger .top-bun .center-part .mouth-section .nose>div {
+    width: 10px;
+    height: 10px;
+    background: #da8282;
+    border-radius: 50%;
+}
+
+.burger .top-bun .center-part .mouth-section .mouth {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 10px black solid;
+    top: -12px;
+    z-index: 1;
+}
+
+.burger .top-bun .center-part .mouth-section .mouth:after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: red;
+    top: 0;
+    left: 0;
+    animation: mouthAnim 4s 2s linear infinite;
+    animation-direction: alternate;
+    position: absolute;
+}
+
+
+.burger .top-bun .center-part .beard-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -10px;
+    z-index: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0px 43px;
+}
+
+.burger .top-bun .center-part .beard-section>div {
+    width: 10px;
+    height: 50px;
+    background-color: brown;
+}
+
+.burger .top-bun .center-part .beard-section>div:nth-of-type(12),
+.burger .top-bun .center-part .beard-section>div:nth-of-type(1) {
+    height: 25px;
+    animation: color1 1s 0s linear infinite;
+    animation-direction: alternate;
+}
+
+.burger .top-bun .center-part .beard-section>div:nth-of-type(11),
+.burger .top-bun .center-part .beard-section>div:nth-of-type(2) {
+    height: 35px;
+    animation: color2 1s 0.2s linear infinite;
+    animation-direction: alternate;
+}
+
+.burger .top-bun .center-part .beard-section>div:nth-of-type(10),
+.burger .top-bun .center-part .beard-section>div:nth-of-type(3) {
+    height: 45px;
+    animation: color3 1s 0.4s linear infinite;
+    animation-direction: alternate;
+}
+
+.burger .top-bun .center-part .beard-section>div:nth-of-type(9),
+.burger .top-bun .center-part .beard-section>div:nth-of-type(4) {
+    height: 55px;
+    animation: color4 1s 0.6s linear infinite;
+    animation-direction: alternate;
+}
+
+.burger .top-bun .center-part .beard-section>div:nth-of-type(8),
+.burger .top-bun .center-part .beard-section>div:nth-of-type(5) {
+    height: 60px;
+    animation: color5 1s 0.8s linear infinite;
+    animation-direction: alternate;
+}
+
+.burger .top-bun .center-part .beard-section>div:nth-of-type(7),
+.burger .top-bun .center-part .beard-section>div:nth-of-type(6) {
+    height: 65px;
+    animation: color6 1s 1s linear infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes mouthAnim {
+    from {
+        height: 10px;
+    }
+
+    to {
+        height: 70px;
+    }
+}
+
+@keyframes eyelidAnim {
+    from {
+        top: -15px;
+    }
+
+    to {
+        top: 16px;
+    }
+}
+
+@keyframes pointAnim {
+    from {
+        transform: scale(1.0, 1.0);
+    }
+
+    to {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+.hat-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hat-container .hat {
+    width: 150px;
+    height: 100%;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hat-container .hat .upper {
+    width: 88px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: green;
+    position: relative;
+    top: 14px;
+    border-bottom: 1px black solid;
+}
+
+.hat-container .hat .center {
+    width: 80px;
+    height: 70px;
+    background-color: green;
+    background-image: url(img/logo.png);
+    background-size: 33px;
+    background-position: center 22px;
+    background-repeat: no-repeat;
+
+
+}
+
+.hat-container .hat .bottom {
+    width: 100px;
+    height: 20px;
+    background-color: green;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hat-container .hat .bottom>div:nth-of-type(1) {
+    width: 14px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: green;
+    position: absolute;
+    top: -8px;
+    left: -6px;
+    transform: rotate(307deg);
+}
+
+.hat-container .hat .bottom>div:nth-of-type(2) {
+    width: 14px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: green;
+    position: absolute;
+    top: -8px;
+    right: -6px;
+    transform: rotate(230deg);
+}
+
+@keyframes color1 {
+    from {
+        background-color: saddlebrown;
+    }
+
+    to {
+        background-color: red;
+    }
+
+}
+
+@keyframes color2 {
+    from {
+        background-color: saddlebrown;
+    }
+
+    to {
+        background-color: orange;
+    }
+
+}
+
+@keyframes color3 {
+    from {
+        background-color: saddlebrown;
+    }
+
+    to {
+        background-color: yellow;
+    }
+
+}
+
+@keyframes color4 {
+    from {
+        background-color: saddlebrown;
+    }
+
+    to {
+        background-color: green;
+    }
+
+}
+
+@keyframes color5 {
+    from {
+        background-color: saddlebrown;
+    }
+
+    to {
+        background-color: blue;
+    }
+
+}
+
+@keyframes color6 {
+    from {
+        background-color: saddlebrown;
+    }
+
+    to {
+        background-color: violet;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.burger {
+    width:500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.burger .header {
+    width: 100%;
+    height: 150px;
+    border-radius: 183px 183px 0px 0px;
+    background-color: #d2ab65;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 5px 5px 0px #00000063;
+    position: relative;
+    z-index: 10;
+}
+
+.burger .header .right-part,
+.burger .header .left-part {
+    position: relative;
+    width: 110px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.burger .header .right-part > div,
+.burger .header .left-part > div {
+    border-radius: 50%;
+    position: absolute;
+    background-color: orange;
+
+    width: 20px;
+    height: 20px;
+}
+
+.burger .header .left-part > div:nth-of-type(1) {
+    margin-top:-10px;
+    margin-left:-10px;
+}
+
+
+.burger .header .left-part > div:nth-of-type(2) {
+    margin-bottom: -78px;
+    margin-left: 35px;
+}
+
+.burger .header .left-part > div:nth-of-type(3) {
+    margin-top: 5px;
+    margin-right: -83px;
+
+}
+
+.burger .header .right-part > div:nth-of-type(1){
+    margin-top: -10px;
+    margin-left: -58px;
+}
+
+.burger .header .right-part > div:nth-of-type(2) {
+    margin-bottom: -96px;
+    margin-left: -26px;
+}
+
+.burger .header .right-part > div:nth-of-type(3){
+    margin-top: 32px;
+    margin-right: -23px;
+
+}
+
+.burger .header  .center-part {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burger .header  .center-part .mouth,
+.burger .header  .center-part .eye {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.burger .header  .center-part .eye .eye-underline {
+    width: 100%;
+    height: 16px;
+    background-color: #d3109c;
+    border-radius: 10px;
+}
+
+.burger .header  .center-part .eye .eye-ball {
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 7px white solid;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.burger .header  .center-part .eye .eye-ball:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top:-1px;
+    right: -1px;
+}
+
+
+.burger .header  .center-part .eye .eye-ball:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom:-1px;
+    left: -1px;
+}
+
+
+.burger .header  .center-part .mouth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.burger .header  .center-part .mouth .lips {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background-color: #d2ab65;
+    border-radius: 50%;
+    border: 7px black solid;
+    position: absolute;
+    z-index: 0;
+    margin-top: 30px;
+}
+
+.burger .header  .center-part .mouth .nose {
+    width: 30px;
+    height: 30px;
+    background-color: #d2ab65;
+    z-index: 1;
+}
+
+.burger .center {
+    width: 100%;
+    height: 170px;
+    position: relative;
+}
+
+.burger .footer {
+    width: 100%;
+    height: 110px;
+    border-radius: 0px 0px 100px 100px;
+
+    background-color: #ffb660;
+
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+}
+
+.burger .footer .left-part,
+.burger .footer .right-part {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 26px;
+    box-sizing: border-box;
+}
+
+.burger .footer .center-part {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.burger .footer .left-part > div,
+.burger .footer .right-part > div{
+    width: 23px;
+    height: 50px;
+    background-color: darkred;
+    border-radius: 0px 0px 10px 10px;
+
+    position: relative;
+}
+
+.burger .footer .left-part > div:nth-of-type(1) {
+    height: 70px;
+}
+
+.burger .footer .left-part > div:before,
+.burger .footer .right-part > div:before{
+    content: '';
+    width: 8px;
+    height: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    left: 4px;
+    bottom: 21px;
+}
+
+.burger .footer .left-part > div:after,
+.burger .footer .right-part > div:after{
+    content: '';
+    width: 8px;
+    height: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 6px;
+    left: 4px
+}
+
+.burger .footer .center-part > div {
+    width: 114px;
+    box-sizing: border-box;
+    background: repeating-linear-gradient(90deg, #008000, #60bc86 10px, #008000 10px, #008000 20px);
+    border: 10px green solid;
+    height: 114px;
+    border-radius: 50%;
+    margin-top: -59px;
+    position: relative;
+}
+
+.burger .shadow {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    margin-top: -45px;
+    border-radius: 43px;
+}
+
+.center .bottom {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 20px;
+}
+
+.center .bottom .ketchup {
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: darkred;
+}
+
+.center .bottom .ketchup > div {
+    width: 20px;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.center .bottom .ketchup > div:nth-of-type(1) {
+    left: 11px;
+    width: 10px;
+}
+
+.center .bottom .ketchup > div:nth-of-type(2) {
+    left: 100px;
+    width: 90px;
+}
+
+.center .bottom .ketchup > div:nth-of-type(3) {
+    left: 196px;
+    width: 10px;
+}
+
+.center .bottom .ketchup > div:nth-of-type(4) {
+    right: 52px;
+    width: 20px;
+}
+
+.center .bottom .ketchup > div:nth-of-type(5) {
+    right: 16px;
+    width: 30px;
+}
+
+
+.center .middle {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.center .middle .cutlet {
+    width: 100%;
+    height: 100%;
+    background-color: #5d1010;
+    border-radius: 100px;
+}
+
+.center .top {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+}
+
+.center .top .leaf {
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.center .top .leaf .block{
+    background-color: lightgreen;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.center .top .leaf .block .leaf-circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    bottom: -23px;
+    border-radius: 50%;
+}
+
+.center .top .leaf .block .leaf-circle.green {
+    background-color: lightgreen;
+}
+
+.center .top .leaf .block .leaf-circle.brown {
+    background-color: #5d1010;
+}
+
+.center .top .tomatos {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 100px;
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+.center .top .tomatos > div{
+    width: 150px;
+    height: 140px;
+    position: relative;
+    top: -86px;
+    background-color: #ff5454;
+    box-sizing: border-box;
+    border: 15px red solid;
+    border-radius: 50%;
+}
+
+.center .top .onion {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 100px;
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.center .top .onion > div {
+    border-radius: 50%;
+    border: 15px darkviolet solid;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -71px;
+    left: 7px;
+    background-color: transparent;
+}
+
+.center .top .onion > div > span {
+    border-radius: 50%;
+    border:10px white solid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: block;
+}
+
+.center .top .cheese {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 100px;
+    position: absolute;
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.center .top .cheese > div {
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+    background-color: #f3f053;
+    position: relative;
+    top: -91px;
+
+}
+
+.center .top .cheese-drops {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 100px;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.center .top .cheese-drops > div {
+    width: 20px;
+    height: 20px;
+    background-color: #f3f053;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+}
+
+.center .top .cheese-drops > div:after {
+    content: '';
+    width: 7px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 10px;
+}
+
+.center .top .cheese-drops > div:nth-of-type(1) {
+    transform: translateX(-52px);
+    height: 96px;
+}
+
+.center .top .cheese-drops > div:nth-of-type(2) {
+    transform: translateX(156px);
+    height: 50px;
+}
+
+.center .top .cheese-drops > div:nth-of-type(3) {
+    transform: translateX(126px);
+    height: 31px;
+}
+
+.center .top .cheese-drops > div:nth-of-type(4) {
+    transform: translateX(64px);
+    height: 74px
+
+}
+
+.center .top .rects {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 200px;
+    position: absolute;
+    z-index: 6;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.center .top .rects > div{
+    width: 13px;
+    height: 13px;
+    transform: rotate(45deg);
+    background-color: white;
+    position: relative;
+}
+
+.center .top .rects > div:nth-of-type(2n){
+    bottom: -50px;
+}
